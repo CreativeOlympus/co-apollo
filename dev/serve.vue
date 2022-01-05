@@ -14,5 +14,6 @@ export default defineComponent({
 <template>
   <div id="app">
     <co-apollo-ds-sample />
+    <h1 class="text-3xl font-bold underline">Test tailwind</h1>
   </div>
 </template>

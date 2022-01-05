@@ -1,10 +1,11 @@
-import { createApp } from 'vue';
-import Dev from './serve.vue';
+import { createApp } from 'vue'
+import Dev from './serve.vue'
+import '@/styles/index.css'
 // To register individual components where they are used (serve.vue) instead of using the
 // library as a whole, comment/remove this import and it's corresponding "app.use" call
-import CoApolloDs from '@/entry.esm';
+import CoApolloDs from '@/entry.esm'
 
-const app = createApp(Dev);
-app.use(CoApolloDs);
+const app = createApp(Dev)
+app.use(CoApolloDs)
 
-app.mount('#app');
+app.mount('#app')
