@@ -3,26 +3,45 @@
     "target": "esnext",
     "module": "esnext",
     "strict": true,
-    "jsx": "preserve",
+    "declaration": true,
+    "declarationDir": "dist/types",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "importHelpers": true,
     "moduleResolution": "node",
-    "skipLibCheck": true,
+    "experimentalDecorators": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "baseUrl": ".",
-    "types": ["webpack-env", "mocha", "chai"],
+    "newLine": "lf",
+    "types": [
+      "node",
+      "vue",
+      "jest"
+    ],
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": [
+        "src/*"
+      ]
     },
-    "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
+    "plugins": [
+      {
+        "transform": "@zerollup/ts-transform-paths",
+        "exclude": [
+          "*"
+        ]
+      }
+    ],
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable",
+      "scripthost"
+    ]
   },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue",
-    "tests/**/*.ts",
-    "tests/**/*.tsx"
-  ],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
 }
