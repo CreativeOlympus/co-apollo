@@ -11,7 +11,8 @@
     "build:ssr": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format cjs",
     "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife",
     "postbuild": "rimraf ./dist/types/dev ./dist/types/src/entry.d.ts",
-    "prebuild": "rimraf ./dist"
+    "prebuild": "rimraf ./dist",
+    "prepare": "husky install"
   },
   "main": "dist/co-apollo-ds.ssr.js",
   "module": "dist/co-apollo-ds.esm.js",
@@ -63,7 +64,8 @@
     "typescript": "~4.1.5",
     "vue": "^3.0.5",
     "vue-jest": "^5.0.0-0",
-    "vue-template-compiler": "^2.6.14"
+    "vue-template-compiler": "^2.6.14",
+    "husky": "^7.0.0"
   },
   "peerDependencies": {
     "vue": "^3.0.5"

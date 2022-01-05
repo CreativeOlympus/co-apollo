@@ -11,4 +11,8 @@ export default /*#__PURE__*/ defineComponent({
 })
 </script>
 
-<template><button @click="handleClick">Click Here</button></template>
+<template>
+  <button @click="handleClick">
+    <slot />
+  </button>
+</template>
