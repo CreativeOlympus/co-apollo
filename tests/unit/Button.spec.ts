@@ -1,5 +1,5 @@
 import { shallowMount } from '@vue/test-utils'
-import Button from '@/lib-components/Button.vue'
+import Button from '@/lib-components/coa-button.vue'
 
 describe('Button.vue', () => {
   it('Render button with children', () => {
