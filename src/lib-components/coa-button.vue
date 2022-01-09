@@ -12,7 +12,7 @@ export default /*#__PURE__*/ defineComponent({
 </script>
 
 <template>
-  <button @click="handleClick">
+  <button class="btn btn-blue" @click="handleClick">
     <slot />
   </button>
 </template>

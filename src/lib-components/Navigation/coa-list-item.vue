@@ -5,20 +5,16 @@ export default defineComponent({
   name: 'coa-list-item',
   props: {
     tag: {
-      type: String,
-      default: '',
+      type: String || null,
     },
     title: {
-      type: String,
-      default: '',
+      type: String || null,
     },
     description: {
-      type: String,
-      default: '',
+      type: String || null,
     },
     icon: {
-      type: String,
-      default: '',
+      type: String || null,
     },
     active: {
       type: Boolean,
@@ -48,17 +44,15 @@ export default defineComponent({
       [props.hoverClass]: true,
     }
 
+    console.log('testing ->>>', props.tag)
+
     return {
       classList,
+      ...props,
     }
   },
 })
 </script>
 <template>
-  <component :is="tag" :class="classList">
-    <template v-if="title || description">
-      <span v-if="!!title">{{ title }}</span>
-      <span v-if="!!description">{{ description }}</span>
-    </template>
-  </component>
+  <component :is="tag" :class="classList"> Testing </component>
 </template>
