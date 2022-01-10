@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Button.vue Render button with children 1`] = `
-<button>
+<button
+  class="btn btn-blue"
+>
   
   Click Here
   
