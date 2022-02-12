@@ -22,7 +22,9 @@
     "dist/*",
     "src/**/*.vue"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "@heroicons/vue": "^1.0.5"
+  },
   "devDependencies": {
     "@babel/core": "^7.14.6",
     "@babel/preset-env": "^7.14.7",
