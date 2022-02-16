@@ -1,1 +1,1 @@
-export { default as CoaButton } from './coa-button.vue'
+export { default as CoaButton } from './button/coa-button.vue'
