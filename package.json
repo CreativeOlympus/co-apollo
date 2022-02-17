@@ -2,7 +2,11 @@
   "name": "co-apollo-ds",
   "version": "0.1.0",
   "description": "A custom design system based on tailwindcss",
-  "keywords": ["design system", "component library", "vuejs component library"],
+  "keywords": [
+    "design system",
+    "component library",
+    "vuejs component library"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve dev/serve.ts",
     "build": "cross-env NODE_ENV=production rollup --config build/rollup.config.js",
@@ -60,6 +64,7 @@
     "rimraf": "^3.0.2",
     "rollup": "^2.52.8",
     "rollup-plugin-postcss": "^4.0.0",
+    "rollup-plugin-tailwindcss": "^1.0.0",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.30.0",
     "rollup-plugin-vue": "^6.0.0",

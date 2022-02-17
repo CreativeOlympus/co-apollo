@@ -12,6 +12,7 @@ import { terser } from 'rollup-plugin-terser';
 import ttypescript from 'ttypescript';
 import typescript from 'rollup-plugin-typescript2';
 import minimist from 'minimist';
+import tailwind from 'rollup-plugin-tailwindcss';
 
 // Get browserslist config and remove ie from es build targets
 const esbrowserslist = fs.readFileSync('./.browserslistrc')
@@ -171,6 +172,9 @@ if (!argv.format || argv.format === 'iife') {
           ecma: 5,
         },
       }),
+      tailwind({
+        input: 'src/style/entry.css'
+      })
     ],
   };
   buildFormats.push(unpkgConfig);
