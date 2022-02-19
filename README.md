@@ -17,7 +17,7 @@ yarn add co-apollo-ds
 
 Add [tailwindcss](https://tailwindcss.com/docs/guides/vite) dependencies to your dev dependencies:
 
-```json
+```javascript
 // package.json
 
 ...
