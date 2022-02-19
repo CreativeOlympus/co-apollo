@@ -173,7 +173,7 @@ if (!argv.format || argv.format === 'iife') {
         },
       }),
       tailwind({
-        input: 'src/style/entry.css'
+        input: 'src/lib-components/style/entry.css'
       })
     ],
   };

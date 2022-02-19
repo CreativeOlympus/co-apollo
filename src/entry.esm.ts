@@ -1,6 +1,4 @@
 import { App, Plugin } from 'vue'
-import '@/style/entry.css'
-
 // Import vue components
 import * as components from '@/lib-components/index'
 
