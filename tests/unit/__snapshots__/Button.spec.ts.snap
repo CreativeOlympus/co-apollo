@@ -2,10 +2,14 @@
 
 exports[`Button.vue Render button with children 1`] = `
 <button
-  class="btn btn-blue"
+  class="coa-btn coa-btn-blue coa-btn-normal coa-btn-base"
 >
   
+  
+  
   Click Here
+  
+  
   
 </button>
 `;
