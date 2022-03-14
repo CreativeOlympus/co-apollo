@@ -6,7 +6,7 @@
     align-content: center;
     justify-content: left;
     flex-basis: auto;
-    gap: 12px;
+    gap: 6px;
 }
 
 .coa-btn.fullWidth {
@@ -15,22 +15,22 @@
 }
 
 .coa-btn-base {
-    @apply py-3 px-4;
+    @apply py-3 px-3;
     font-size: theme('fontSize.base');
 }
 
 .coa-btn-xs {
-    @apply py-2 px-3;
+    @apply py-2 px-2;
     font-size: theme('fontSize.xs');
 }
 
 .coa-btn-sm {
-    @apply py-2 px-3;
+    @apply py-2 px-2;
     font-size: theme('fontSize.sm');
 }
 
 .coa-btn-lg {
-    @apply py-3 px-4;
+    @apply py-3 px-3;
     font-size: theme('fontSize.lg');
 }
 

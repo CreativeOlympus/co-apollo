@@ -1,0 +1,13 @@
+.coa-carousel {
+    width: 100%;
+    height: auto;
+}
+
+.coa-carousel-item {
+    @apply py-3 px-3;
+}
+
+.coa-carousel-item img {
+    width: 100%;
+    height: auto
+}
