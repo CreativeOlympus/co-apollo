@@ -61,5 +61,29 @@ export default defineComponent({
   </div>
 </template>
 <style scoped>
-@import './style.css';
+.coa-carousel {
+    @apply
+    relative
+    w-screen
+    mx-auto
+}
+
+.coa-carousel-content {
+    @apply
+    relative
+    w-full
+    flex
+    flex-initial
+    z-10
+    gap-5
+    sm:gap-10
+    p-5
+    sm:p-10
+    overflow-hidden;
+}
+
+.coa-carousel-item-wrapper {
+    @apply transition
+}
+
 </style>

@@ -70,5 +70,16 @@ export default defineComponent({
   </figure>
 </template>
 <style>
-@import './style.css';
+.coa-carousel-item {
+  min-width: 430px;
+  max-width: 100vw;
+  min-height: calc(100vh - 10vh);
+  max-height: 100vh;
+  @apply p-6 rounded-3xl flex flex-col justify-center content-center self-center text-center;
+}
+
+.coa-carousel-item img {
+  width: 100%;
+  height: auto;
+}
 </style>

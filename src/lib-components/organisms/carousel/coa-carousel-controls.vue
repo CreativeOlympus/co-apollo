@@ -31,5 +31,27 @@ export default defineComponent({
   </div>
 </template>
 <style scoped>
-@import './style.css';
+.coa-carousel-control {
+    @apply absolute w-16 sm:w-24 h-full flex flex-col content-center justify-center z-20 transition-transform
+}
+
+.coa-carousel-control.previous {
+    @apply left-0 top-0
+}
+
+.coa-carousel-control.next {
+    @apply right-0 top-0
+}
+
+.coa-carousel-control svg {
+    @apply transition-all opacity-10
+}
+
+.coa-carousel-control:hover svg{
+    @apply opacity-100
+}
+
+.coa-carousel-control:active svg {
+    @apply transform scale-50
+}
 </style>
