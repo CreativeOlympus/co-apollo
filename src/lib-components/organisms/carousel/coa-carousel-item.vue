@@ -69,3 +69,6 @@ export default defineComponent({
     </figcaption>
   </figure>
 </template>
+<style>
+@import './style.css';
+</style>

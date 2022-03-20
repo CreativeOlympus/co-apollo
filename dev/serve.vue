@@ -10,10 +10,17 @@ export default defineComponent({
   },
   setup() {
     const slide: SlideContent = {
-      title: 'Testing Title',
+      title: 'Testing Title !',
       subtitle: 'Testing Subtitle',
+      bgColor: 'green',
     }
-    const slides: SlideContent[] = [slide, slide]
+    const slide2: SlideContent = {
+      title: ' Testing Title 2 !',
+      subtitle: 'Testing subtitle 2 ',
+      bgColor: 'yellow',
+      textColor: 'black',
+    }
+    const slides: SlideContent[] = [slide, slide2, slide, slide2]
 
     return { slides }
   },

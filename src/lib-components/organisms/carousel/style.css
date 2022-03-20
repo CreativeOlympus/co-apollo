@@ -1,9 +1,22 @@
 .coa-carousel {
-    @apply container w-full mx-auto;
+    @apply
+    w-screen
+    p-5
+    sm:p-10
+    mx-auto
+    flex
+    flex-initial
+    gap-5
+    sm:gap-10
+    overflow-hidden
 }
 
 .coa-carousel-item {
-    @apply p-6 mx-3 rounded-3xl;
+    min-width: calc(100vw - 20vw);
+    max-width: 100vw;
+    min-height: calc(100vh - 10vh);
+    max-height: 100vh;
+    @apply p-6 rounded-3xl flex flex-col justify-center content-center self-center text-center;
 }
 
 .coa-carousel-item img {
