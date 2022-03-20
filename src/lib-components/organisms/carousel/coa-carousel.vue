@@ -13,9 +13,24 @@ export default defineComponent({
 </script>
 <template>
   <div class="coa-carousel">
-    <CoaCarouselItem v-for="(item, index) in items" :key="index">
-      <slot :item="item"> </slot>
-    </CoaCarouselItem>
+    <div
+      class="coa-carousel-item-wrapper"
+      v-for="(item, index) in items"
+      :key="index"
+    >
+      <slot :item="item">
+        <CoaCarouselItem
+          :title="item.title"
+          :subtitle="item.subtitle"
+          :bg-color="item.bgColor"
+          :text-color="item.textColor"
+          :image="item.image"
+          :alt="item.alt"
+          :default-image="item.defaultImage"
+          :content="item.content"
+        />
+      </slot>
+    </div>
   </div>
 </template>
 <style scoped>

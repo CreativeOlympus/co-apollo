@@ -4,4 +4,7 @@ export interface SlideContent {
   image?: string
   alt?: string
   content?: string
+  bgColor?: string
+  textColor?: string
+  defaultImage?: boolean
 }

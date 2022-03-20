@@ -13,26 +13,15 @@ export default defineComponent({
       title: 'Testing Title',
       subtitle: 'Testing Subtitle',
     }
-    const slides: SlideContent[] = [slide]
+    const slides: SlideContent[] = [slide, slide]
 
     return { slides }
   },
 })
-
-/*
- * title
- * subtitle
- * bgColor
- * textColor
- * image
- * alt
- * defaultImage
- * content
- *  */
 </script>
 
 <template>
   <div id="app">
-    <CoaCarousel :items="slides"></CoaCarousel>
+    <CoaCarousel :items="slides" />
   </div>
 </template>
