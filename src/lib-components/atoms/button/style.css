@@ -1,17 +1,10 @@
 .coa-btn {
-    @apply uppercase rounded-md;
-    font-size: theme('fontSize.base');
+    @apply uppercase flex flex-initial rounded-md text-base gap-2 content-center justify-start self-center;
     transition: 0.2s;
-    display: flex;
-    align-content: center;
-    justify-content: left;
-    flex-basis: auto;
-    gap: 6px;
 }
 
 .coa-btn.fullWidth {
-    width: 100%;
-    justify-content: center;
+    @apply w-full justify-center;
 }
 
 .coa-btn-base {
@@ -52,7 +45,7 @@
 
 .coa-btn-normal,
 .coa-btn-blue {
-    background-color: theme('colors.blue.500');
+    @apply bg-blue-500;
     color: theme('colors.white');
 }
 
@@ -81,13 +74,18 @@
     @apply bg-green-700;
 }
 
+
 .coa-btn:active {
     transform: scale(0.95);
     opacity: 0.8;
 }
 
-.coa-btn-cancel {
-    background-color: theme('colors.gray.600') !important;
+.coa-btn-cancel, .coa-btn-gray {
+    background-color: theme('colors.gray.400');
+}
+
+.coa-btn-gray:hover, .coa-btn-cancel:hover {
+    background-color: theme('colors.gray.700') !important;
 }
 
 .coa-btn.disabled {

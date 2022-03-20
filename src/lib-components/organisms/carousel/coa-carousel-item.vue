@@ -1,18 +1,16 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { CoaButton } from '@/lib-components'
+import DefaultImage from '@/lib-components/atoms/placeholders/coa-default-image.vue'
 
 export default defineComponent({
   name: 'CoaCarouselItem',
-  components: { CoaButton },
+  components: { DefaultImage },
   props: {
     title: {
       type: String,
-      default: 'Sample Title',
     },
     subtitle: {
       type: String,
-      default: 'Sample Subtitle',
     },
     bgColor: {
       type: String,
@@ -24,15 +22,17 @@ export default defineComponent({
     },
     image: {
       type: String,
-      default: 'https://picsum.photos/200/300',
     },
     alt: {
       type: String,
-      default: 'Image name',
+      default: 'Default picture',
+    },
+    defaultImage: {
+      type: Boolean,
+      default: false,
     },
     content: {
       type: String,
-      default: 'Large Text',
     },
   },
   setup(props) {
@@ -49,16 +49,23 @@ export default defineComponent({
 <template>
   <figure :class="allClasses">
     <figcaption>
-      <h2 class="text-4xl">{{ title }}</h2>
-      <p class="text-2xl">{{ subtitle }}</p>
-
-      <img :src="image" :alt="alt" />
-
-      <div>
-        {{ content }}
+      <div class="coa-carousel-item-header">
+        <slot name="header" :item="{ image, alt }">
+          <img v-if="image" :src="image" :alt="alt" />
+          <default-image v-if="!image && defaultImage" icon-type="outline" />
+        </slot>
+      </div>
+      <div class="coa-carousel-item-content">
+        <slot :item="{ title, subtitle, content, image }">
+          <h2 class="text-4xl">{{ title }}</h2>
+          <p class="text-2xl">{{ subtitle }}</p>
+          {{ content }}
+        </slot>
       </div>
 
-      <CoaButton color="success"> Action Here </CoaButton>
+      <div class="coa-carousel-item-footer flex flow-row gap-4">
+        <slot name="footer"></slot>
+      </div>
     </figcaption>
   </figure>
 </template>

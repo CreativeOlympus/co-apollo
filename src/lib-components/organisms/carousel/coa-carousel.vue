@@ -7,13 +7,15 @@ export default defineComponent({
   name: 'CoaCarousel',
   components: { CoaCarouselItem },
   props: {
-    slides: Array as PropType<Array<SlideContent>>,
+    items: Array as PropType<Array<SlideContent>>,
   },
 })
 </script>
 <template>
   <div class="coa-carousel">
-    <CoaCarouselItem></CoaCarouselItem>
+    <CoaCarouselItem v-for="(item, index) in items" :key="index">
+      <slot :item="item"> </slot>
+    </CoaCarouselItem>
   </div>
 </template>
 <style scoped>
