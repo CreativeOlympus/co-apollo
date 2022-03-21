@@ -37,16 +37,11 @@ export default /*#__PURE__*/ defineComponent({
 
     return { allClasses, buttonType }
   },
-  methods: {
-    handleClick(event: HTMLElement) {
-      this.$emit('click', event)
-    },
-  },
 })
 </script>
 
 <template>
-  <button :class="allClasses" @click="handleClick" :disabled="disabled">
+  <button :class="allClasses" :disabled="disabled">
     <slot name="prepend"></slot>
     <slot />
     <slot name="append"></slot>
@@ -57,6 +52,10 @@ export default /*#__PURE__*/ defineComponent({
 .coa-btn {
     @apply uppercase flex flex-initial rounded-md text-base gap-2 content-center justify-start self-center;
     transition: 0.2s;
+}
+
+.coa-btn svg {
+  width: 17px
 }
 
 .coa-btn.fullWidth {
