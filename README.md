@@ -1,4 +1,4 @@
-# [Co Apollo Design System](https://tailwindcss.com/docs/guides/vite)
+# [Co Apollo Design System (WIP)](https://tailwindcss.com/docs/guides/vite)
 
 A design system based on tailwindcss for Vue3.
 
